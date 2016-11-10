@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   updateCurrentTime(timeText) {
+    console.log(timeText);
   }
 
 
