@@ -19,15 +19,19 @@ class App extends Component {
   }
 
   updateCurrentTime(timeText) {
-    console.log(timeText);
+    const currentTime = Number(timeText);
+    console.log('updateCurrentTime:' );
   }
 
 
   render() {
     return (
       <div className="App">
-        <button onClick={this.setState({playerState: !this.state.playerState})}>click here</button>
-        <input onChange={(e) => this.updateCurrentTime(e.target.value)}></input>
+        <button onClick={() => this.setState({playerState: !this.state.playerState})}>click here</button>
+        <input
+          onChange={(e) => this.updateCurrentTime(e.target.value)}>
+        </input>
+
         <YouTubePlayer
           YTid='a-Zt_oGTm4I'
           currentTime={this.state.CurrentTime}

@@ -35,12 +35,17 @@ export default class YouTube extends Component {
       // this.player.pauseVideo();
 
     }
+    if (NextProps.playerState) {
+      this.player.startVideo();
+    } else {
+      this.player.pauseVideo();
+    }
   }
 
   onPlayerStateChange = (e) => {
-    if (typeof this.props.onStateChange === 'function') {
-      this.props.onStateChange(e)
-    }
+    // if (typeof this.props.onStateChange === 'function') {
+    //   this.props.onStateChange(e)
+    // }
 
     // this.player.seekTo(this.props.currentTime, true);
   }
